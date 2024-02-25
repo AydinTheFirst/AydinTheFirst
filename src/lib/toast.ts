@@ -10,6 +10,10 @@ export type Toast = {
 
 export const ToastCache = signal<Toast[]>([]);
 
+export const removeToast = (id: number) => {
+  ToastCache.value = ToastCache.value.filter((toast) => toast.id !== id);
+};
+
 export const toast = (payload: Toast) => {
   const newToast = {
     id: Date.now(),
@@ -19,8 +23,6 @@ export const toast = (payload: Toast) => {
   ToastCache.value = [...ToastCache.value, newToast];
 
   setTimeout(() => {
-    ToastCache.value = ToastCache.value.filter(
-      (toast) => toast.id !== newToast.id,
-    );
+    removeToast(newToast.id);
   }, toastExpireTime);
 };
