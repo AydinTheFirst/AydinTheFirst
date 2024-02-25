@@ -31,9 +31,12 @@ const ToastComponent = (toast: Toast) => {
           )}
           <h1>{toast.type === "success" ? "Success" : "Error"}</h1>
         </div>
-        <p className="text-small font-semibold text-default-500">
-          {toast.message}
-        </p>
+        <div className="flex gap-3">
+          <FaCheckCircle className="invisible" />
+          <p className="text-small font-semibold text-default-500">
+            {toast.message}
+          </p>
+        </div>
       </CardBody>
     </Card>
   );
