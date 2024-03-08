@@ -1,12 +1,18 @@
 import React from "react";
 
-export const Section = ({ children }: { children: React.ReactNode }) => {
+export const Section = ({
+  children,
+  height,
+}: {
+  children: React.ReactNode;
+  height?: string;
+}) => {
   return (
     <>
       <section
         className="container flex flex-col items-center justify-center"
         style={{
-          minHeight: "100vh",
+          minHeight: height || "100vh",
         }}
       >
         {children}
