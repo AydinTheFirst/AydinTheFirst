@@ -1,7 +1,7 @@
 import { Section } from ".";
 import { useLocation, Link } from "react-router-dom";
 import { Breadcrumbs, BreadcrumbItem, Button } from "@nextui-org/react";
-import { toast } from "@/lib/toast";
+import { toast } from "sonner";
 
 export const Component = () => {
   const pages = [
@@ -48,10 +48,7 @@ export const Component = () => {
 
   const handleClick = () => {
     const isError = Math.random() > 0.5;
-    toast({
-      message: isError ? "An error occurred" : "Success!",
-      type: isError ? "error" : "success",
-    });
+    toast(isError ? "An error occurred" : "Success!");
   };
   return (
     <Section>
