@@ -47,7 +47,10 @@ export const UserCard = () => {
             defaultValue="aydinhalil980@gmail.com"
           />
 
-          <Input label="Birth Date" defaultValue={"25 September 2004"} />
+          <Input
+            label="Age"
+            defaultValue={(new Date().getFullYear() - 2004).toString()}
+          />
 
           <Input label="Location" defaultValue="Turkey" />
 
