@@ -121,14 +121,9 @@ const Resume = () => {
       </CardHeader>
       <CardBody>
         <div className="container">
-          <Slider label="Frontend" marks={marks} defaultValue={75} />
+          <Slider label="Frontend" marks={marks} value={75} />
 
-          <Slider
-            label="Backend"
-            marks={marks}
-            color="danger"
-            defaultValue={90}
-          />
+          <Slider label="Backend" marks={marks} color="danger" value={90} />
 
           <Slider
             label="Design"
@@ -137,25 +132,15 @@ const Resume = () => {
             defaultValue={60}
           />
 
-          <Slider
-            label="Marketing"
-            marks={marks}
-            color="success"
-            defaultValue={80}
-          />
+          <Slider label="Marketing" marks={marks} color="success" value={40} />
 
-          <Slider
-            label="Management"
-            marks={marks}
-            color="warning"
-            defaultValue={95}
-          />
+          <Slider label="Management" marks={marks} color="warning" value={95} />
 
           <Slider
             label="Communication"
             marks={marks}
             color="secondary"
-            defaultValue={85}
+            value={85}
           />
         </div>
       </CardBody>

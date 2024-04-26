@@ -1,22 +1,23 @@
+import { cn } from "@nextui-org/react";
 import React from "react";
 
 export const Section = ({
   children,
-  height,
   id,
+  className,
 }: {
   children: React.ReactNode;
-  height?: string;
   id?: string;
+  className?: string;
 }) => {
   return (
     <>
       <section
         id={id}
-        className="container flex flex-col items-center justify-center"
-        style={{
-          minHeight: height || "100dvh",
-        }}
+        className={cn(
+          "container flex min-h-screen flex-col items-center justify-center",
+          className,
+        )}
       >
         {children}
       </section>
