@@ -6,6 +6,7 @@ import { FaGithub } from "react-icons/fa";
 import { SkillRadar } from "./components/SkillRadar";
 import { MyProfile } from "./components/MyProfile";
 import { Layout } from "@/layouts/Home";
+import { Link } from "react-router-dom";
 
 export const App = () => {
   return (
@@ -53,25 +54,27 @@ const LandingSection = () => {
           Halil Aydın
         </h1>
         <br />
-        <TextGenerateEffect words={words} className="text-lg" />
+        <TextGenerateEffect words={words} />
       </div>
       <br />
-      <div className="flex flex-wrap justify-center gap-3">
+      <div className="flex justify-center gap-3">
         <Button
           className="font-bold"
           color="primary"
           variant="shadow"
           onClick={handleExplore}
         >
-          Explore My Work
+          Explore More
         </Button>
         <Button
+          as={Link}
           startContent={<FaGithub className="text-lg" />}
           className="font-bold"
-          href="https://github.com/AydinTheFirst"
+          to="https://github.com/AydinTheFirst"
+          target="_blank"
           variant="flat"
         >
-          View My GitHub
+          Github
         </Button>
       </div>
       <br />

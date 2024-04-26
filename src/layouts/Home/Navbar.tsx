@@ -82,8 +82,8 @@ export const Nav = () => {
       <NavbarContent className="hidden gap-4 sm:flex" justify="end">
         {pages.map((page) => (
           <NavbarItem key={page.title}>
-            <Link color="foreground" href={page.href}>
-              {page.title}
+            <Link color="foreground" href={page.href} size="sm">
+              <b>{page.title}</b>
             </Link>
           </NavbarItem>
         ))}
@@ -91,8 +91,8 @@ export const Nav = () => {
       <NavbarMenu>
         {pages.map((page) => (
           <NavbarMenuItem key={page.title}>
-            <Link color="foreground" href={page.href}>
-              {page.title}
+            <Link color="foreground" href={page.href} size="sm">
+              <b>{page.title}</b>
             </Link>
           </NavbarMenuItem>
         ))}
