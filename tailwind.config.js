@@ -30,7 +30,18 @@ export default {
       },
     },
   },
-  plugins: [nextui(), addVariablesForColors],
+  plugins: [
+    nextui({
+      themes: {
+        dark: {
+          colors: {
+            background: "#1a1a1a",
+          },
+        },
+      },
+    }),
+    addVariablesForColors,
+  ],
 };
 
 function addVariablesForColors({ addBase, theme }) {
