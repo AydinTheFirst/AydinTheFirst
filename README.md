@@ -1,7 +1,7 @@
 # Hi there 👋
 
 # 💫 About Me:
-🔭 I’m currently working on various fullstack projects with JavaScript<br>🌱 I’m currently learning NestJS and Astro<br>⚡ Fun fact Js sucks
+🔭 I’m currently working on various fullstack projects with JavaScript<br>🌱 I’m currently learning NestJS and Astro<br>⚡ Fun fact js sucks
 
 
 ## 🌐 Socials:
